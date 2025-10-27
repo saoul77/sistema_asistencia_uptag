@@ -40,7 +40,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', [PanelController::class, 'index'])->name('panel');
+    Route::get('/', [PanelController::class, 'showAdmin'])->name('panel');
     Route::resource('personal', PersonalController::class);
     Route::resource('invitados', InvitadosController::class);
     Route::resource('asistencias', AsistenciaController::class);

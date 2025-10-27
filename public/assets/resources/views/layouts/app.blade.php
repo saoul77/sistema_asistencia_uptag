@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Personal UPTAG</title>
-    <link href="/resources/css/app.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100 text-gray-800">
 
