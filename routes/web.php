@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\Admin\PanelController;
 use App\Http\Controllers\Admin\PersonalController;
 use App\Http\Controllers\Admin\InvitadosController;
 use App\Http\Controllers\Admin\AsistenciaController;
@@ -26,6 +26,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin', function () {
         return view('panel.admin');
     })->name('admin.dashboard');
+
+    Route::put('/user/{id}', [PanelController::class, 'edit_user'])->name('edit_user');
+    Route::delete('/user/{id}', [PanelController::class, 'delete_user'])->name('delete_user');
 
     // 🔹 PERSONAL / DOCENTE
     Route::get('/personal', function () {

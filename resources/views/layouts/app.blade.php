@@ -138,6 +138,8 @@
                 </table>
             </div>
         </section>
+
+
     </main>
 
     {{-- Script para alternar secciones --}}

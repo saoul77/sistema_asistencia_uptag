@@ -12,4 +12,6 @@
         <a href="{{ route('invitado.panel') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">Ir al Panel de Invitados</a>
     </div>
 </div>
+@extends('panel.card_edit_user')
+
 @endsection
