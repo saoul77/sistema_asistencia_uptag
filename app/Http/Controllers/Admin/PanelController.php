@@ -4,16 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Personal;
 class PanelController extends Controller
 {
+
+
     public function showAdmin()
     {
-        return view('panel.admin');
+        return view('panel.admin', $data = [
+            'personal' => Personal::all(),
+        ]);
     }
     public function edit_user(Request $request, $id)
     {
-        $user = User::findOrFail($id);
+        $user = Personal::findOrFail($id);
         $user->nombre = $request->input('Nombre');
         $user->email = $request->input('Correo');
         $user->cargo = $request->input('Cargo');

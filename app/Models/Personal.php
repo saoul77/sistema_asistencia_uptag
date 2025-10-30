@@ -4,8 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Personal extends Model
 {
-    protected $table = 'Personal';
-    protected $primaryKey = 'personal_id';
+    protected $table = 'personal';
+    protected $primaryKey = 'id';
     public $incrementing = true;
-    protected $fillable = ['nombre','correo','cargo','asistencia'];
+    protected $fillable = ['id','nombre', 'correo', 'cargo', 'asistencia'];
 }

@@ -7,10 +7,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    protected $table = 'usuarios'; // tu tabla personalizada
+    protected $table = 'users'; // tu tabla personalizada
 
     protected $fillable = [
-        'nombre',
+        'name',
         'email',
         'password',
         'rol',
@@ -20,7 +20,5 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
-
 }
 

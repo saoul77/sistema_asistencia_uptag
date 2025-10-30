@@ -18,7 +18,7 @@
     <form action="{{ url('/login') }}" method="POST">
       @csrf
       <div class="mb-3">
-        <input type="email" name="correo" class="form-control" placeholder="Correo institucional" required>
+        <input type="email" name="email" class="form-control" placeholder="Correo institucional" required>
       </div>
       <div class="mb-3">
         <input type="password" name="password" class="form-control" placeholder="Contraseña" required>

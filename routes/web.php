@@ -23,18 +23,20 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // 🔹 ADMIN
 Route::middleware(['auth'])->group(function () {
-    Route::get('/admin', function () {
-        return view('panel.admin');
-    })->name('admin.dashboard');
+    Route::get('/admin', function () { return view('panel.admin'); })->name('admin.dashboard');
+    Route::delete('/personal/{id}', [PersonalController::class, 'destroy'])->name('personal.destroy');
+    Route::put('/personal/{id}', [PersonalController::class, 'edit'] )->name('personal.edit');
+    Route::post('/personal', [PersonalController::class, 'create'])->name('personal.create');
+
+
+
 
     Route::put('/user/{id}', [PanelController::class, 'edit_user'])->name('edit_user');
     Route::delete('/user/{id}', [PanelController::class, 'delete_user'])->name('delete_user');
-
     // 🔹 PERSONAL / DOCENTE
     Route::get('/personal', function () {
         return view('panel.personal');
     })->name('personal.panel');
-
     // 🔹 INVITADO
     Route::get('/invitado', function () {
         return view('panel.invitado');
